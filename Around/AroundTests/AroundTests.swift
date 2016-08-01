@@ -1,15 +1,15 @@
 //
-//  ArroundTests.swift
-//  ArroundTests
+//  AroundTests.swift
+//  AroundTests
 //
 //  Created by phuc.huynh on 8/1/16.
 //  Copyright © 2016 phuc.huynh. All rights reserved.
 //
 
 import XCTest
-@testable import Arround
+@testable import Around
 
-class ArroundTests: XCTestCase {
+class AroundTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

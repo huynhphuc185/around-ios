@@ -1,6 +1,6 @@
 //
-//  ArroundUITests.swift
-//  ArroundUITests
+//  AroundUITests.swift
+//  AroundUITests
 //
 //  Created by phuc.huynh on 8/1/16.
 //  Copyright © 2016 phuc.huynh. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ArroundUITests: XCTestCase {
+class AroundUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

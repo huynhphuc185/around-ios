@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Arround
+//  Around
 //
 //  Created by phuc.huynh on 8/1/16.
 //  Copyright © 2016 phuc.huynh. All rights reserved.

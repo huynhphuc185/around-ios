@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "699F1DAD1D4F293D007253C5"
-               BuildableName = "Arround.app"
-               BlueprintName = "Arround"
-               ReferencedContainer = "container:Arround.xcodeproj">
+               BlueprintIdentifier = "699F1DE71D4F2B00007253C5"
+               BuildableName = "Around.app"
+               BlueprintName = "Around"
+               ReferencedContainer = "container:Around.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "699F1DC11D4F293E007253C5"
-               BuildableName = "ArroundTests.xctest"
-               BlueprintName = "ArroundTests"
-               ReferencedContainer = "container:Arround.xcodeproj">
+               BlueprintIdentifier = "699F1DFB1D4F2B00007253C5"
+               BuildableName = "AroundTests.xctest"
+               BlueprintName = "AroundTests"
+               ReferencedContainer = "container:Around.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "699F1DCC1D4F293E007253C5"
-               BuildableName = "ArroundUITests.xctest"
-               BlueprintName = "ArroundUITests"
-               ReferencedContainer = "container:Arround.xcodeproj">
+               BlueprintIdentifier = "699F1E061D4F2B00007253C5"
+               BuildableName = "AroundUITests.xctest"
+               BlueprintName = "AroundUITests"
+               ReferencedContainer = "container:Around.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "699F1DAD1D4F293D007253C5"
-            BuildableName = "Arround.app"
-            BlueprintName = "Arround"
-            ReferencedContainer = "container:Arround.xcodeproj">
+            BlueprintIdentifier = "699F1DE71D4F2B00007253C5"
+            BuildableName = "Around.app"
+            BlueprintName = "Around"
+            ReferencedContainer = "container:Around.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "699F1DAD1D4F293D007253C5"
-            BuildableName = "Arround.app"
-            BlueprintName = "Arround"
-            ReferencedContainer = "container:Arround.xcodeproj">
+            BlueprintIdentifier = "699F1DE71D4F2B00007253C5"
+            BuildableName = "Around.app"
+            BlueprintName = "Around"
+            ReferencedContainer = "container:Around.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "699F1DAD1D4F293D007253C5"
-            BuildableName = "Arround.app"
-            BlueprintName = "Arround"
-            ReferencedContainer = "container:Arround.xcodeproj">
+            BlueprintIdentifier = "699F1DE71D4F2B00007253C5"
+            BuildableName = "Around.app"
+            BlueprintName = "Around"
+            ReferencedContainer = "container:Around.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
