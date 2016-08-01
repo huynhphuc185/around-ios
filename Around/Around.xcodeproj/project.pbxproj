@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		699F1DEC1D4F2B00007253C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F1DEB1D4F2B00007253C5 /* AppDelegate.swift */; };
-		699F1DEE1D4F2B00007253C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F1DED1D4F2B00007253C5 /* ViewController.swift */; };
 		699F1DF11D4F2B00007253C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699F1DEF1D4F2B00007253C5 /* Main.storyboard */; };
 		699F1DF31D4F2B00007253C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699F1DF21D4F2B00007253C5 /* Assets.xcassets */; };
 		699F1DF61D4F2B00007253C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699F1DF41D4F2B00007253C5 /* LaunchScreen.storyboard */; };
 		699F1E011D4F2B00007253C5 /* AroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F1E001D4F2B00007253C5 /* AroundTests.swift */; };
 		699F1E0C1D4F2B00007253C5 /* AroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F1E0B1D4F2B00007253C5 /* AroundUITests.swift */; };
+		699F1E1A1D4F3D67007253C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F1E191D4F3D67007253C5 /* LoginViewController.swift */; };
+		699F1E281D4F4FFF007253C5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E241D4F4FFF007253C5 /* Bolts.framework */; };
+		699F1E291D4F4FFF007253C5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E251D4F4FFF007253C5 /* FBSDKCoreKit.framework */; };
+		699F1E2A1D4F4FFF007253C5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E261D4F4FFF007253C5 /* FBSDKLoginKit.framework */; };
+		699F1E2B1D4F4FFF007253C5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		699F1DE81D4F2B00007253C5 /* Around.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Around.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		699F1DEB1D4F2B00007253C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		699F1DED1D4F2B00007253C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		699F1DF01D4F2B00007253C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		699F1DF21D4F2B00007253C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		699F1DF51D4F2B00007253C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		699F1E071D4F2B00007253C5 /* AroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		699F1E0B1D4F2B00007253C5 /* AroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundUITests.swift; sourceTree = "<group>"; };
 		699F1E0D1D4F2B00007253C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		699F1E191D4F3D67007253C5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		699F1E241D4F4FFF007253C5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		699F1E251D4F4FFF007253C5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		699F1E261D4F4FFF007253C5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699F1E2B1D4F4FFF007253C5 /* FBSDKShareKit.framework in Frameworks */,
+				699F1E281D4F4FFF007253C5 /* Bolts.framework in Frameworks */,
+				699F1E291D4F4FFF007253C5 /* FBSDKCoreKit.framework in Frameworks */,
+				699F1E2A1D4F4FFF007253C5 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +86,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69620C2D1D4F59A400F813C5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69620C2E1D4F59BF00F813C5 /* LoginViewController */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		69620C2E1D4F59BF00F813C5 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				699F1E191D4F3D67007253C5 /* LoginViewController.swift */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		69620C2F1D4F59DB00F813C5 /* Layout_Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				699F1DEF1D4F2B00007253C5 /* Main.storyboard */,
+				699F1DF41D4F2B00007253C5 /* LaunchScreen.storyboard */,
+			);
+			name = Layout_Storyboard;
+			sourceTree = "<group>";
+		};
+		69620C301D4F59FC00F813C5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		69620C311D4F5A0B00F813C5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Object;
+			sourceTree = "<group>";
+		};
 		699F1DDF1D4F2B00007253C5 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +148,13 @@
 		699F1DEA1D4F2B00007253C5 /* Around */ = {
 			isa = PBXGroup;
 			children = (
+				69620C311D4F5A0B00F813C5 /* Object */,
+				69620C301D4F59FC00F813C5 /* Common */,
+				69620C2F1D4F59DB00F813C5 /* Layout_Storyboard */,
+				69620C2D1D4F59A400F813C5 /* ViewController */,
+				699F1E1B1D4F405A007253C5 /* Framework */,
 				699F1DEB1D4F2B00007253C5 /* AppDelegate.swift */,
-				699F1DED1D4F2B00007253C5 /* ViewController.swift */,
-				699F1DEF1D4F2B00007253C5 /* Main.storyboard */,
 				699F1DF21D4F2B00007253C5 /* Assets.xcassets */,
-				699F1DF41D4F2B00007253C5 /* LaunchScreen.storyboard */,
 				699F1DF71D4F2B00007253C5 /* Info.plist */,
 			);
 			path = Around;
@@ -123,6 +176,17 @@
 				699F1E0D1D4F2B00007253C5 /* Info.plist */,
 			);
 			path = AroundUITests;
+			sourceTree = "<group>";
+		};
+		699F1E1B1D4F405A007253C5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				699F1E241D4F4FFF007253C5 /* Bolts.framework */,
+				699F1E251D4F4FFF007253C5 /* FBSDKCoreKit.framework */,
+				699F1E261D4F4FFF007253C5 /* FBSDKLoginKit.framework */,
+				699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,8 +257,6 @@
 				TargetAttributes = {
 					699F1DE71D4F2B00007253C5 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = KX397UN32X;
-						DevelopmentTeamName = "Soroeru Inc.";
 						ProvisioningStyle = Automatic;
 					};
 					699F1DFB1D4F2B00007253C5 = {
@@ -265,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				699F1DEE1D4F2B00007253C5 /* ViewController.swift in Sources */,
+				699F1E1A1D4F3D67007253C5 /* LoginViewController.swift in Sources */,
 				699F1DEC1D4F2B00007253C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +474,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Around",
+				);
 				INFOPLIST_FILE = Around/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuc.dreamplex.Around;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +491,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Around",
+				);
 				INFOPLIST_FILE = Around/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuc.dreamplex.Around;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,6 +573,7 @@
 				699F1E121D4F2B00007253C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		699F1E131D4F2B00007253C5 /* Build configuration list for PBXNativeTarget "AroundTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +582,7 @@
 				699F1E151D4F2B00007253C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		699F1E161D4F2B00007253C5 /* Build configuration list for PBXNativeTarget "AroundUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +591,7 @@
 				699F1E181D4F2B00007253C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
