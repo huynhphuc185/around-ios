@@ -8,55 +8,55 @@
 
 import UIKit
 import FBSDKLoginKit
-class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
+class LoginViewController: WithOutStatusBarViewController {
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    override func viewDidAppear(_ animated: Bool) {
         if (FBSDKAccessToken.current() != nil)
         {
-            // User is already logged in, do work such as go to next view controller.
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
-            loginView.readPermissions = ["public_profile", "email", "user_friends"]
-            loginView.delegate = self
-        }
-        else
-        {
-            let loginView : FBSDKLoginButton = FBSDKLoginButton()
-            self.view.addSubview(loginView)
-            loginView.center = self.view.center
-            loginView.readPermissions = ["public_profile", "email", "user_friends"]
-            loginView.delegate = self
+            
+            self.performSegue(withIdentifier: "logintohome", sender: nil)
+            
         }
     }
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        if ((error) != nil)
-        {
-            // Process error
-        }
-        else if result.isCancelled {
-            // Handle cancellations
-        }
-        else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
-            {
-                // Do work
-                returnUserData()
+    
+    
+    
+    
+    @IBAction func btnFBLoginPressed(sender: AnyObject) {
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager .logIn(withReadPermissions: ["public_profile", "email", "user_friends"], handler: { (result, error) -> Void in
+            if (error == nil){
+                if result!.isCancelled
+                {
+                    print("User Logged Out")
+                }
+                else if(result!.grantedPermissions.contains("email"))
+                {
+                     self.performSegue(withIdentifier: "logintohome", sender: nil)
+                }
+               
             }
-        }
+        })
     }
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("User Logged Out")
+
+    
+    
+    
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        
     }
+    
     
     func returnUserData()
     {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, first_name, last_name, gender, picture"])
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
             
             if ((error) != nil)
@@ -67,7 +67,7 @@ class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
             else
             {
                 print("fetched user: \(result)")
-                let userName : NSString = result?.value(forKey: "name") as! NSString
+                let userName : NSString = result?.value(forKey: "first_name") as! NSString
                 print("User Name is: \(userName)")
                 let userEmail : NSString = result?.value(forKey: "email") as! NSString
                 print("User Email is: \(userEmail)")

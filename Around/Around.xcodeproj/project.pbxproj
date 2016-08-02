@@ -18,6 +18,14 @@
 		699F1E291D4F4FFF007253C5 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E251D4F4FFF007253C5 /* FBSDKCoreKit.framework */; };
 		699F1E2A1D4F4FFF007253C5 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E261D4F4FFF007253C5 /* FBSDKLoginKit.framework */; };
 		699F1E2B1D4F4FFF007253C5 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */; };
+		69B577781D505334000B4A28 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B577771D505334000B4A28 /* SWRevealViewController.m */; };
+		69B5777B1D505435000B4A28 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B5777A1D505435000B4A28 /* SidebarTableViewController.m */; };
+		69B5777E1D5054CF000B4A28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5777D1D5054CF000B4A28 /* HomeViewController.swift */; };
+		69B577821D507E9E000B4A28 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B577811D507E9E000B4A28 /* CustomSegue.swift */; };
+		69B577841D507F80000B4A28 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B577831D507F80000B4A28 /* Define.swift */; };
+		69B577871D508C1E000B4A28 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B577861D508C1E000B4A28 /* MapViewController.swift */; };
+		69B577891D50900D000B4A28 /* WithOutStatusBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B577881D50900D000B4A28 /* WithOutStatusBarViewController.swift */; };
+		69B5778B1D50A23A000B4A28 /* RegisterPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B5778A1D50A23A000B4A28 /* RegisterPhoneNumberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,17 @@
 		699F1E251D4F4FFF007253C5 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		699F1E261D4F4FFF007253C5 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		69B577751D504D80000B4A28 /* BridgingHeaderfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeaderfile.h; sourceTree = "<group>"; };
+		69B577761D505334000B4A28 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		69B577771D505334000B4A28 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		69B577791D505435000B4A28 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		69B5777A1D505435000B4A28 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		69B5777D1D5054CF000B4A28 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		69B577811D507E9E000B4A28 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		69B577831D507F80000B4A28 /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		69B577861D508C1E000B4A28 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		69B577881D50900D000B4A28 /* WithOutStatusBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithOutStatusBarViewController.swift; sourceTree = "<group>"; };
+		69B5778A1D50A23A000B4A28 /* RegisterPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPhoneNumberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +108,10 @@
 		69620C2D1D4F59A400F813C5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				69B577851D508C03000B4A28 /* MapViewController */,
+				69B5777C1D5054AD000B4A28 /* HomeViewController */,
 				69620C2E1D4F59BF00F813C5 /* LoginViewController */,
+				69B577881D50900D000B4A28 /* WithOutStatusBarViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -98,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				699F1E191D4F3D67007253C5 /* LoginViewController.swift */,
+				69B5778A1D50A23A000B4A28 /* RegisterPhoneNumberViewController.swift */,
 			);
 			name = LoginViewController;
 			sourceTree = "<group>";
@@ -114,6 +137,8 @@
 		69620C301D4F59FC00F813C5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				69B577811D507E9E000B4A28 /* CustomSegue.swift */,
+				69B577831D507F80000B4A28 /* Define.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -148,6 +173,8 @@
 		699F1DEA1D4F2B00007253C5 /* Around */ = {
 			isa = PBXGroup;
 			children = (
+				69B577751D504D80000B4A28 /* BridgingHeaderfile.h */,
+				69B577661D504BF5000B4A28 /* Library */,
 				69620C311D4F5A0B00F813C5 /* Object */,
 				69620C301D4F59FC00F813C5 /* Common */,
 				69620C2F1D4F59DB00F813C5 /* Layout_Storyboard */,
@@ -187,6 +214,49 @@
 				699F1E271D4F4FFF007253C5 /* FBSDKShareKit.framework */,
 			);
 			name = Framework;
+			sourceTree = "<group>";
+		};
+		69B577661D504BF5000B4A28 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				69B5778C1D50A555000B4A28 /* ConnectData */,
+				69B577671D504BFF000B4A28 /* Slide menu */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		69B577671D504BFF000B4A28 /* Slide menu */ = {
+			isa = PBXGroup;
+			children = (
+				69B577761D505334000B4A28 /* SWRevealViewController.h */,
+				69B577771D505334000B4A28 /* SWRevealViewController.m */,
+				69B577791D505435000B4A28 /* SidebarTableViewController.h */,
+				69B5777A1D505435000B4A28 /* SidebarTableViewController.m */,
+			);
+			name = "Slide menu";
+			sourceTree = "<group>";
+		};
+		69B5777C1D5054AD000B4A28 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69B5777D1D5054CF000B4A28 /* HomeViewController.swift */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		69B577851D508C03000B4A28 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				69B577861D508C1E000B4A28 /* MapViewController.swift */,
+			);
+			name = MapViewController;
+			sourceTree = "<group>";
+		};
+		69B5778C1D50A555000B4A28 /* ConnectData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ConnectData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,8 +397,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B5777E1D5054CF000B4A28 /* HomeViewController.swift in Sources */,
+				69B5777B1D505435000B4A28 /* SidebarTableViewController.m in Sources */,
 				699F1E1A1D4F3D67007253C5 /* LoginViewController.swift in Sources */,
 				699F1DEC1D4F2B00007253C5 /* AppDelegate.swift in Sources */,
+				69B577821D507E9E000B4A28 /* CustomSegue.swift in Sources */,
+				69B577781D505334000B4A28 /* SWRevealViewController.m in Sources */,
+				69B577841D507F80000B4A28 /* Define.swift in Sources */,
+				69B5778B1D50A23A000B4A28 /* RegisterPhoneNumberViewController.swift in Sources */,
+				69B577871D508C1E000B4A28 /* MapViewController.swift in Sources */,
+				69B577891D50900D000B4A28 /* WithOutStatusBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Around",
@@ -483,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuc.dreamplex.Around;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Around/BridgingHeaderfile.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -491,6 +571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Around",
@@ -500,6 +581,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.phuc.dreamplex.Around;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Around/BridgingHeaderfile.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
