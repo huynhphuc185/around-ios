@@ -61,8 +61,9 @@ class DataConnect {
                     onsuccess(result: JSON.valueForKey("code")!)
                 }
             case .Failure(let error):
-                print(error)
+                
                 onFailure()
+                print(error)
             }
             
             
