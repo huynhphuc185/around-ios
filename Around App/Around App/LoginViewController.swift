@@ -9,17 +9,28 @@
 import UIKit
 import FBSDKLoginKit
 class LoginViewController: WithOutStatusBarViewController {
-
-
+    
+    @IBOutlet weak var constrainTopLogo: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        if DeviceType.IS_IPHONE_4_OR_LESS
+        {
+            constrainTopLogo.constant = 65
+        }
+        else if DeviceType.IS_IPHONE_5
+        {
+            constrainTopLogo.constant = 75
+        }
+        
+        self.view.needsUpdateConstraints()
     }
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+   
     override func viewDidAppear(animated: Bool) {
-//        if FBSDKAccessToken.currentAccessToken() != nil{
-//            self.performSegueWithIdentifier("logintohome", sender: nil)
-//        }
+        
         
     }
     
@@ -34,24 +45,17 @@ class LoginViewController: WithOutStatusBarViewController {
                 }
                 else if(result!.grantedPermissions.contains("email"))
                 {
-                    self.performSegueWithIdentifier("logintoregister", sender: nil)
+                    self.performSegueWithIdentifier(kSegueLoginToRegister, sender: nil)
                 }
                 
             }
         }
     }
-
-    
-    
-    
-   
-   
-    
     
     func returnUserData()
     {
         let graphRequest: FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "email, first_name, last_name, gender, picture"])
-
+        
         
         
         
@@ -64,28 +68,18 @@ class LoginViewController: WithOutStatusBarViewController {
             else
             {
                 print("fetched user: \(result)")
-//                let userName : NSString = result?.value(forKey: "first_name") as! NSString
-//                print("User Name is: \(userName)")
-//                let userEmail : NSString = result?.value(forKey: "email") as! NSString
-//                print("User Email is: \(userEmail)")
+                //                let userName : NSString = result?.value(forKey: "first_name") as! NSString
+                //                print("User Name is: \(userName)")
+                //                let userEmail : NSString = result?.value(forKey: "email") as! NSString
+                //                print("User Email is: \(userEmail)")
             }
-
+            
         }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

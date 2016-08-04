@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69242EA21D51C42F00A763B1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9E1D51C42F00A763B1 /* Bolts.framework */; };
-		69242EA31D51C42F00A763B1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9F1D51C42F00A763B1 /* FBSDKCoreKit.framework */; };
-		69242EA41D51C42F00A763B1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA01D51C42F00A763B1 /* FBSDKLoginKit.framework */; };
-		69242EA51D51C42F00A763B1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA11D51C42F00A763B1 /* FBSDKShareKit.framework */; };
 		69242EDE1D51CDA100A763B1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242ECD1D51CCD900A763B1 /* Alamofire.framework */; };
 		69242EDF1D51CDBD00A763B1 /* Alamofire.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = 69242ECD1D51CCD900A763B1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		69242EE21D51D13900A763B1 /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69242EE11D51D13900A763B1 /* Function.swift */; };
@@ -33,6 +29,19 @@
 		699E8DB81D51ABB00073EEA8 /* NetKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E8DB71D51ABB00073EEA8 /* NetKit.swift */; };
 		699E8DBC1D51AC660073EEA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E8DBB1D51AC660073EEA8 /* Extensions.swift */; };
 		699E8DBE1D51AF190073EEA8 /* DataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E8DBD1D51AF190073EEA8 /* DataConnect.swift */; };
+		69B772921D52E312008EE52E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9E1D51C42F00A763B1 /* Bolts.framework */; };
+		69B772931D52E312008EE52E /* Bolts.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = 69242E9E1D51C42F00A763B1 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B772941D52E312008EE52E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9F1D51C42F00A763B1 /* FBSDKCoreKit.framework */; };
+		69B772951D52E312008EE52E /* FBSDKCoreKit.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = 69242E9F1D51C42F00A763B1 /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B772961D52E312008EE52E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA01D51C42F00A763B1 /* FBSDKLoginKit.framework */; };
+		69B772971D52E312008EE52E /* FBSDKLoginKit.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = 69242EA01D51C42F00A763B1 /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B772981D52E313008EE52E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA11D51C42F00A763B1 /* FBSDKShareKit.framework */; };
+		69B772991D52E313008EE52E /* FBSDKShareKit.framework in Copy Framework */ = {isa = PBXBuildFile; fileRef = 69242EA11D51C42F00A763B1 /* FBSDKShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		69B7729B1D52F4B2008EE52E /* BottomLineTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7729A1D52F4B2008EE52E /* BottomLineTextfield.swift */; };
+		69B7729F1D5325EE008EE52E /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7729E1D5325EE008EE52E /* PaddingTextField.swift */; };
+		69B772A31D532EB1008EE52E /* DefaultNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A21D532EB1008EE52E /* DefaultNavigation.swift */; };
+		69B772A81D533D7F008EE52E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A61D533D7F008EE52E /* TutorialPageViewController.swift */; };
+		69B772A91D533D7F008EE52E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A71D533D7F008EE52E /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +125,10 @@
 			dstSubfolderSpec = 10;
 			files = (
 				69242EDF1D51CDBD00A763B1 /* Alamofire.framework in Copy Framework */,
+				69B772951D52E312008EE52E /* FBSDKCoreKit.framework in Copy Framework */,
+				69B772991D52E313008EE52E /* FBSDKShareKit.framework in Copy Framework */,
+				69B772971D52E312008EE52E /* FBSDKLoginKit.framework in Copy Framework */,
+				69B772931D52E312008EE52E /* Bolts.framework in Copy Framework */,
 			);
 			name = "Copy Framework";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +170,11 @@
 		699E8DB71D51ABB00073EEA8 /* NetKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetKit.swift; sourceTree = "<group>"; };
 		699E8DBB1D51AC660073EEA8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		699E8DBD1D51AF190073EEA8 /* DataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataConnect.swift; sourceTree = "<group>"; };
+		69B7729A1D52F4B2008EE52E /* BottomLineTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomLineTextfield.swift; sourceTree = "<group>"; };
+		69B7729E1D5325EE008EE52E /* PaddingTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		69B772A21D532EB1008EE52E /* DefaultNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNavigation.swift; sourceTree = "<group>"; };
+		69B772A61D533D7F008EE52E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		69B772A71D533D7F008EE52E /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				69242EDE1D51CDA100A763B1 /* Alamofire.framework in Frameworks */,
-				69242EA51D51C42F00A763B1 /* FBSDKShareKit.framework in Frameworks */,
-				69242EA21D51C42F00A763B1 /* Bolts.framework in Frameworks */,
-				69242EA31D51C42F00A763B1 /* FBSDKCoreKit.framework in Frameworks */,
-				69242EA41D51C42F00A763B1 /* FBSDKLoginKit.framework in Frameworks */,
+				69B772941D52E312008EE52E /* FBSDKCoreKit.framework in Frameworks */,
+				69B772981D52E313008EE52E /* FBSDKShareKit.framework in Frameworks */,
+				69B772961D52E312008EE52E /* FBSDKLoginKit.framework in Frameworks */,
+				69B772921D52E312008EE52E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +284,9 @@
 				699E8DBB1D51AC660073EEA8 /* Extensions.swift */,
 				699E8CE81D519E5C0073EEA8 /* CustomSegue.swift */,
 				699E8CE91D519E5C0073EEA8 /* Define.swift */,
+				69B7729A1D52F4B2008EE52E /* BottomLineTextfield.swift */,
+				69B7729E1D5325EE008EE52E /* PaddingTextField.swift */,
+				69B772A21D532EB1008EE52E /* DefaultNavigation.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -293,12 +314,11 @@
 		699E8D061D519E810073EEA8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				69B772A51D533D77008EE52E /* Tutorial */,
+				69B772A41D533D66008EE52E /* Login */,
 				699E8CED1D519E5C0073EEA8 /* HomeViewController.swift */,
-				699E8CEE1D519E5C0073EEA8 /* LoginViewController.swift */,
 				699E8CEF1D519E5C0073EEA8 /* MapViewController.swift */,
-				699E8CF01D519E5C0073EEA8 /* RegisterPhoneNumberViewController.swift */,
 				699E8CF51D519E5C0073EEA8 /* WithOutStatusBarViewController.swift */,
-				69242EE31D51FB1C00A763B1 /* VerifyOTPViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -321,6 +341,25 @@
 				699E8DBD1D51AF190073EEA8 /* DataConnect.swift */,
 			);
 			name = "Data Connect";
+			sourceTree = "<group>";
+		};
+		69B772A41D533D66008EE52E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				699E8CEE1D519E5C0073EEA8 /* LoginViewController.swift */,
+				699E8CF01D519E5C0073EEA8 /* RegisterPhoneNumberViewController.swift */,
+				69242EE31D51FB1C00A763B1 /* VerifyOTPViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		69B772A51D533D77008EE52E /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				69B772A61D533D7F008EE52E /* TutorialPageViewController.swift */,
+				69B772A71D533D7F008EE52E /* TutorialViewController.swift */,
+			);
+			name = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -514,19 +553,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B7729F1D5325EE008EE52E /* PaddingTextField.swift in Sources */,
 				699E8D001D519E5C0073EEA8 /* SidebarTableViewController.m in Sources */,
+				69B772A91D533D7F008EE52E /* TutorialViewController.swift in Sources */,
 				699E8D021D519E5C0073EEA8 /* WithOutStatusBarViewController.swift in Sources */,
 				699E8CF71D519E5C0073EEA8 /* CustomSegue.swift in Sources */,
 				699E8CFF1D519E5C0073EEA8 /* RegisterPhoneNumberViewController.swift in Sources */,
 				699E8CFE1D519E5C0073EEA8 /* MapViewController.swift in Sources */,
+				69B772A81D533D7F008EE52E /* TutorialPageViewController.swift in Sources */,
 				699E8CF81D519E5C0073EEA8 /* Define.swift in Sources */,
 				699E8D011D519E5C0073EEA8 /* SWRevealViewController.m in Sources */,
 				699E8DB81D51ABB00073EEA8 /* NetKit.swift in Sources */,
 				69242EE41D51FB1C00A763B1 /* VerifyOTPViewController.swift in Sources */,
 				699E8DBC1D51AC660073EEA8 /* Extensions.swift in Sources */,
+				69B7729B1D52F4B2008EE52E /* BottomLineTextfield.swift in Sources */,
 				69242EE21D51D13900A763B1 /* Function.swift in Sources */,
 				699E8DBE1D51AF190073EEA8 /* DataConnect.swift in Sources */,
 				699E8CB91D519E2E0073EEA8 /* AppDelegate.swift in Sources */,
+				69B772A31D532EB1008EE52E /* DefaultNavigation.swift in Sources */,
 				699E8CFD1D519E5C0073EEA8 /* LoginViewController.swift in Sources */,
 				699E8CFC1D519E5C0073EEA8 /* HomeViewController.swift in Sources */,
 			);
@@ -625,7 +669,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -664,7 +708,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -679,6 +723,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Around",
+					App,
+					"$(PROJECT_DIR)/Around",
+					App,
 					"$(PROJECT_DIR)/Around",
 					App,
 					"$(PROJECT_DIR)/Around",
@@ -703,6 +751,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Around",
+					App,
+					"$(PROJECT_DIR)/Around",
+					App,
 					"$(PROJECT_DIR)/Around",
 					App,
 					"$(PROJECT_DIR)/Around",

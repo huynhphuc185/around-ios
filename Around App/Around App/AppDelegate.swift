@@ -20,12 +20,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.sharedApplication().registerUserNotificationSettings(settings)
         UIApplication.sharedApplication().registerForRemoteNotifications()
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-
-        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        if defaults.objectForKey("token") == nil{
+            defaults.setObject("", forKey: "token")
+        }
+        
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+        
+        
+        
+        
+        
+        if let _ = defaults.stringForKey("isAppAlreadyLaunchedOnce"){
+            let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            window =  UIWindow(frame: UIScreen.mainScreen().bounds)
+            window?.makeKeyAndVisible()
+            self.window?.rootViewController = vc
+            
+        }else{
+            defaults.setBool(true, forKey: "isAppAlreadyLaunchedOnce")
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TutorialViewController") as! TutorialViewController
+            window =  UIWindow(frame: UIScreen.mainScreen().bounds)
+            window?.makeKeyAndVisible()
+            self.window?.rootViewController = vc
+        }
+        
+        
         return true
 
     }
+    
+   
+    
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }

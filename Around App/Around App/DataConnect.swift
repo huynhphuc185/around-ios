@@ -58,7 +58,14 @@ class DataConnect {
             case .Success:
                 if let JSON = response.result.value
                 {
-                    onsuccess(result: JSON.valueForKey("code")!)
+                    if JSON.valueForKey("code") as! Int == 1
+                    {
+                        defaults.setObject(JSON.valueForKey("data")?.valueForKey("token") as! String , forKey: "token")
+                        onsuccess(result: "success")
+                    }
+                    else{
+                         onFailure()
+                    }
                 }
             case .Failure(let error):
                 

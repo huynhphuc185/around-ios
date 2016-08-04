@@ -18,9 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    menuItems = @[@"title",@"Option 1", @"Option 2", @"Option 3", @"Option 4", @"Option 5",@"Option 6",@"Option 7" ];
+    menuItems = @[@"title",@"news", @"comments", @"map", @"calendar", @"wishlist",@"bookmark",@"tag" ];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

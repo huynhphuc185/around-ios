@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VerifyOTPViewController: UIViewController {
+class VerifyOTPViewController: WithOutStatusBarViewController {
 
     @IBOutlet weak var txtOTP: UITextField!
     var numberPhone : String!
@@ -17,19 +17,22 @@ class VerifyOTPViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
       @IBAction func btnSubmit(sender: AnyObject) {
         
         DataConnect.verifyOTP(numberPhone,otpCode: txtOTP.text!,onsuccess: { data in
-            let result = data as! Int
-            if result == 0
+            let result = data as! String
+            if result == "success"
             {
-                self.performSegueWithIdentifier("verifytohome", sender: nil)
+                self.performSegueWithIdentifier(kSegueVerifyToHome, sender: nil)
             }
-            
             })
         {
+            //print("fail")
+            showAlert("", message: "Error OTP", sender: self)
         }
     }
     override func didReceiveMemoryWarning() {
