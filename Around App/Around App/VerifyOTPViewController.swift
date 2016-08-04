@@ -11,6 +11,7 @@ import UIKit
 class VerifyOTPViewController: WithOutStatusBarViewController {
 
     @IBOutlet weak var txtOTP: UITextField!
+    var profileUser : ProfileUser?
     var numberPhone : String!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +28,16 @@ class VerifyOTPViewController: WithOutStatusBarViewController {
             let result = data as! String
             if result == "success"
             {
+                let token = defaults.valueForKey("token") as! String
+                DataConnect.updateProfile(self.numberPhone, token: token, profileUser: self.profileUser!, onsuccess: { (result) in
+                    
+                    }, onFailure: { 
+                        
+                })
                 self.performSegueWithIdentifier(kSegueVerifyToHome, sender: nil)
             }
             })
         {
-            //print("fail")
             showAlert("", message: "Error OTP", sender: self)
         }
     }

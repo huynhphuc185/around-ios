@@ -45,7 +45,9 @@ class LoginViewController: WithOutStatusBarViewController {
                 }
                 else if(result!.grantedPermissions.contains("email"))
                 {
-                    self.performSegueWithIdentifier(kSegueLoginToRegister, sender: nil)
+                    self.returnUserData()
+                    
+                    
                 }
                 
             }
@@ -62,19 +64,38 @@ class LoginViewController: WithOutStatusBarViewController {
         graphRequest.startWithCompletionHandler { (connection, result, error) in
             if ((error) != nil)
             {
-                // Process error
                 print("Error: \(error)")
             }
             else
             {
                 print("fetched user: \(result)")
-                //                let userName : NSString = result?.value(forKey: "first_name") as! NSString
-                //                print("User Name is: \(userName)")
-                //                let userEmail : NSString = result?.value(forKey: "email") as! NSString
-                //                print("User Email is: \(userEmail)")
+                    let first_Name  = result.valueForKey("first_name") as! String
+                    let last_name  = result.valueForKey("last_name") as! String
+                    let email  = result.valueForKey("email") as! String
+                    let fbID  = result.valueForKey("id") as! String
+                let avatarURL  = result.valueForKey("picture")?.valueForKey("data")?.valueForKey("url") as! String
+                
+                let profileUser = ProfileUser(fb_id: fbID, user_name: last_name + first_Name , avatarImageURL: avatarURL,email: email)
+                self.performSegueWithIdentifier(kSegueLoginToRegister, sender: profileUser)
             }
             
         }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == kSegueLoginToRegister {
+                if let profile = sender as? ProfileUser {
+                    let vc = segue.destinationViewController as! RegisterPhoneNumberViewController
+                    vc.profileUser  = profile
+                }
+                
+            }
+            
+            
+        }
+
+        
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

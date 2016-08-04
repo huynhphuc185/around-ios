@@ -9,7 +9,7 @@ import Alamofire
 import UIKit
 
 class RegisterPhoneNumberViewController: WithOutStatusBarViewController {
-
+    var profileUser : ProfileUser?
     @IBOutlet weak var txtNumberPhone: PaddingTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,7 @@ class RegisterPhoneNumberViewController: WithOutStatusBarViewController {
             if identifier == kSegueRegisterToVerify {
                 let vc = segue.destinationViewController as! VerifyOTPViewController
                 vc.numberPhone = txtNumberPhone.text
+                vc.profileUser = self.profileUser
             }
         }
     }

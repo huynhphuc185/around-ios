@@ -7,7 +7,7 @@ class DataConnect {
     
     static let loginURL = "http://api.mapp.vn/register/login"
     static let verifyOTPURL = "http://api.mapp.vn/register/verify"
-    
+    static let updateProfileURL = "http://api.mapp.vn/register/userupdate"
     
     typealias onSuccess = (result : AnyObject)->()
     typealias onFailed = () -> ()
@@ -42,6 +42,49 @@ class DataConnect {
     }
     
     
+    class func updateProfile (numberPhone : String ,token : String, profileUser: ProfileUser ,onsuccess : onSuccess , onFailure: onFailed )
+    {
+        let parameters = [
+            "action": "updateinfo",
+            "phone": numberPhone,
+            "deviceid": deviceID(),
+            "devicetoken": deviceID(),
+            "token": token,
+            "username" : profileUser.user_name,
+            "avatarurl" : profileUser.avatarImageURL,
+            "email" : profileUser.email,
+            "fbid" : profileUser.fb_id,
+        ]
+        
+        Alamofire.request(.POST,updateProfileURL , parameters:parameters ).responseJSON { response in
+            
+            switch response.result {
+            case .Success:
+                if let JSON = response.result.value
+                {
+                    if JSON.valueForKey("code") as! Int == 1
+                    {
+                        onsuccess(result: "success")
+                    }
+                    else{
+                         onFailure()
+                    }
+                }
+            case .Failure(let error):
+                
+                onFailure()
+                print(error)
+            }
+            
+            
+            
+            
+            
+        }
+    }
+    
+    
+    
     class func verifyOTP (numberPhone : String ,otpCode : String ,onsuccess : onSuccess , onFailure: onFailed )
     {
         let parameters = [
@@ -64,7 +107,7 @@ class DataConnect {
                         onsuccess(result: "success")
                     }
                     else{
-                         onFailure()
+                        onFailure()
                     }
                 }
             case .Failure(let error):
@@ -79,7 +122,6 @@ class DataConnect {
             
         }
     }
-    
     
 
 }

@@ -42,6 +42,7 @@
 		69B772A31D532EB1008EE52E /* DefaultNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A21D532EB1008EE52E /* DefaultNavigation.swift */; };
 		69B772A81D533D7F008EE52E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A61D533D7F008EE52E /* TutorialPageViewController.swift */; };
 		69B772A91D533D7F008EE52E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772A71D533D7F008EE52E /* TutorialViewController.swift */; };
+		69B772AC1D53462C008EE52E /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772AB1D53462C008EE52E /* ProfileUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		69B772A21D532EB1008EE52E /* DefaultNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultNavigation.swift; sourceTree = "<group>"; };
 		69B772A61D533D7F008EE52E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		69B772A71D533D7F008EE52E /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		69B772AB1D53462C008EE52E /* ProfileUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 		699E8CB71D519E2E0073EEA8 /* Around App */ = {
 			isa = PBXGroup;
 			children = (
+				69B772AA1D534618008EE52E /* Object */,
 				699E8D071D519E870073EEA8 /* Framework */,
 				699E8D061D519E810073EEA8 /* ViewController */,
 				699E8D041D519E690073EEA8 /* Library */,
@@ -360,6 +363,14 @@
 				69B772A71D533D7F008EE52E /* TutorialViewController.swift */,
 			);
 			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		69B772AA1D534618008EE52E /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				69B772AB1D53462C008EE52E /* ProfileUser.swift */,
+			);
+			name = Object;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,6 +568,7 @@
 				699E8D001D519E5C0073EEA8 /* SidebarTableViewController.m in Sources */,
 				69B772A91D533D7F008EE52E /* TutorialViewController.swift in Sources */,
 				699E8D021D519E5C0073EEA8 /* WithOutStatusBarViewController.swift in Sources */,
+				69B772AC1D53462C008EE52E /* ProfileUser.swift in Sources */,
 				699E8CF71D519E5C0073EEA8 /* CustomSegue.swift in Sources */,
 				699E8CFF1D519E5C0073EEA8 /* RegisterPhoneNumberViewController.swift in Sources */,
 				699E8CFE1D519E5C0073EEA8 /* MapViewController.swift in Sources */,
