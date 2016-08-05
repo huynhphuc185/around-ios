@@ -344,7 +344,7 @@
                                         <fontDescription key="fontDescription" name="TwCenMT-CondensedBold" family="Tw Cen MT Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb x1" translatesAutoresizingMaskIntoConstraints="NO" id="CcB-Zm-JRa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user x2" translatesAutoresizingMaskIntoConstraints="NO" id="CcB-Zm-JRa">
                                         <rect key="frame" x="65" y="32" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="CH7-gh-Gph"/>
@@ -378,7 +378,7 @@
                                         <fontDescription key="fontDescription" name="TwCenMT-CondensedBold" family="Tw Cen MT Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone x1" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-5K-EHx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start x2" translatesAutoresizingMaskIntoConstraints="NO" id="GO1-5K-EHx">
                                         <rect key="frame" x="65" y="32" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="WGw-8w-Vpj"/>
@@ -413,7 +413,7 @@
                                         <fontDescription key="fontDescription" name="TwCenMT-CondensedBold" family="Tw Cen MT Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb x1" translatesAutoresizingMaskIntoConstraints="NO" id="Led-rS-tfh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="order x2" translatesAutoresizingMaskIntoConstraints="NO" id="Led-rS-tfh">
                                         <rect key="frame" x="65" y="32" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="GL7-Vt-fD3"/>
@@ -450,7 +450,7 @@
                                         <fontDescription key="fontDescription" name="TwCenMT-CondensedBold" family="Tw Cen MT Condensed" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb x1" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-YG-YK9">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help x2" translatesAutoresizingMaskIntoConstraints="NO" id="Czt-YG-YK9">
                                         <rect key="frame" x="65" y="32" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NWG-ZP-412"/>
@@ -475,7 +475,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-6v-HWc">
                                 <rect key="frame" x="0.0" y="342" width="320" height="114"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fb x1" translatesAutoresizingMaskIntoConstraints="NO" id="pof-Fe-Pme">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="payment x2" translatesAutoresizingMaskIntoConstraints="NO" id="pof-Fe-Pme">
                                         <rect key="frame" x="65" y="32" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="X5P-FR-ZXl"/>
@@ -552,6 +552,13 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="viewHelp" destination="jCS-an-44s" id="Lnd-rt-Quv"/>
+                        <outlet property="viewOrder" destination="bNm-TS-OWf" id="bx1-0f-rZV"/>
+                        <outlet property="viewPayment" destination="QbF-6v-HWc" id="39p-da-FOc"/>
+                        <outlet property="viewProfile" destination="bbl-He-Ed6" id="a0D-yN-q01"/>
+                        <outlet property="viewStart" destination="uJ7-nA-pJv" id="Bzi-Jb-rBn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i0M-m5-Wcp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1207,14 +1214,19 @@
         <image name="calendar" width="22" height="22"/>
         <image name="comments" width="22" height="22"/>
         <image name="fb x1" width="29" height="29"/>
+        <image name="help x2" width="49" height="49"/>
         <image name="i" width="122" height="36"/>
         <image name="login x1" width="249" height="75"/>
         <image name="logo x1" width="198" height="198"/>
         <image name="map" width="22" height="22"/>
         <image name="menu" width="22" height="22"/>
+        <image name="order x2" width="49" height="56"/>
+        <image name="payment x2" width="49" height="50"/>
         <image name="phone x1" width="30" height="31"/>
+        <image name="start x2" width="49" height="59"/>
         <image name="step 1" width="750" height="1334"/>
         <image name="tag" width="22" height="22"/>
+        <image name="user x2" width="50" height="47"/>
         <image name="wishlist" width="22" height="22"/>
     </resources>
 </document>

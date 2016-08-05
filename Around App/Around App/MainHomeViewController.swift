@@ -10,9 +10,21 @@ import UIKit
 
 class MainHomeViewController: WithOutStatusBarViewController {
 
+    
+    @IBOutlet weak var viewPayment: UIView!
+    @IBOutlet weak var viewHelp: UIView!
+    @IBOutlet weak var viewOrder: UIView!
+    @IBOutlet weak var viewStart: UIView!
+    @IBOutlet weak var viewProfile: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        viewProfile.backgroundColor = UIColor(hex: "#363636")
+//         viewOrder.backgroundColor = UIColor(hex: "#363636")
+//         viewHelp.backgroundColor = UIColor(hex: "#363636")
+//        viewPayment.backgroundColor = UIColor(hex: "#ebebeb")
+//        viewStart.backgroundColor = UIColor(hex: "#ebebeb")
+        
+        
         // Do any additional setup after loading the view.
     }
 

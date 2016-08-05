@@ -46,47 +46,47 @@ class LoginViewController: WithOutStatusBarViewController {
     
     
     @IBAction func btnFBLoginPressed(sender: AnyObject) {
-//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-//        fbLoginManager.logInWithReadPermissions(["public_profile", "email", "user_friends"]) { (result, error) in
-//            if (error == nil){
-//                if result!.isCancelled
-//                {
-//                    print("User Logged Out")
-//                }
-//                else if(result!.grantedPermissions.contains("email"))
-//                {
-//                    self.returnUserData()
-//                    
-//                    
-//                }
-//                
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager.logInWithReadPermissions(["public_profile", "email", "user_friends"]) { (result, error) in
+            if (error == nil){
+                if result!.isCancelled
+                {
+                    print("User Logged Out")
+                }
+                else if(result!.grantedPermissions.contains("email"))
+                {
+                    self.returnUserData()
+                    
+                    
+                }
+                
+            }
+        }
+        
+        
+        
+//        var longitude :CLLocationDegrees = 106.704405
+//        var latitude :CLLocationDegrees = 10.782642
+//        
+//        var location = CLLocation(latitude: latitude, longitude: longitude) //changed!!!
+//       // print(location)
+//        
+//        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+//            //print(location)
+//            
+//            if error != nil {
+//                print("Reverse geocoder failed with error" + error!.localizedDescription)
+//                return
 //            }
-//        }
-        
-        
-        
-        var longitude :CLLocationDegrees = 106.704405
-        var latitude :CLLocationDegrees = 10.782642
-        
-        var location = CLLocation(latitude: latitude, longitude: longitude) //changed!!!
-       // print(location)
-        
-        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
-            //print(location)
-            
-            if error != nil {
-                print("Reverse geocoder failed with error" + error!.localizedDescription)
-                return
-            }
-            
-            if placemarks!.count > 0 {
-                let pm = placemarks![0] as! CLPlacemark
-                print(pm)
-            }
-            else {
-                print("Problem with the data received from geocoder")
-            }
-        })
+//            
+//            if placemarks!.count > 0 {
+//                let pm = placemarks![0] as! CLPlacemark
+//                print(pm)
+//            }
+//            else {
+//                print("Problem with the data received from geocoder")
+//            }
+//        })
         
     }
     
