@@ -53,7 +53,7 @@ class DataConnect {
             "username" : profileUser.user_name,
             "avatarurl" : profileUser.avatarImageURL,
             "email" : profileUser.email,
-            "fbid" : profileUser.fb_id,
+            "fbid" : profileUser.fb_id
         ]
         
         Alamofire.request(.POST,updateProfileURL , parameters:parameters ).responseJSON { response in

@@ -35,5 +35,53 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Around App/DataConnect.swift"
+            timestampString = "491999869.123872"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "updateProfile(_:token:profileUser:onsuccess:onFailure:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Around_App.DataConnect.updateProfile (Swift.String, token : Swift.String, profileUser : Around_App.ProfileUser, onsuccess : (result : Swift.AnyObject) -&gt; (), onFailure : () -&gt; ()) -&gt; ()"
+                  moduleName = "Around App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phuc.huynh/Desktop/LapTrinh/DreamPlex/Around%20App/Around%20App/Around%20App/DataConnect.swift"
+                  timestampString = "492084267.897424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "1231">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static Around_App.DataConnect.(updateProfile (Swift.String, token : Swift.String, profileUser : Around_App.ProfileUser, onsuccess : (result : Swift.AnyObject) -&gt; (), onFailure : () -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "Around App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phuc.huynh/Desktop/LapTrinh/DreamPlex/Around%20App/Around%20App/Around%20App/DataConnect.swift"
+                  timestampString = "492084267.897603"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "154">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

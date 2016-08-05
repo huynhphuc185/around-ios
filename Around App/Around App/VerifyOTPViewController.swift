@@ -18,22 +18,23 @@ class VerifyOTPViewController: WithOutStatusBarViewController {
 
         // Do any additional setup after loading the view.
     }
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
-    
+        
       @IBAction func btnSubmit(sender: AnyObject) {
         
         DataConnect.verifyOTP(numberPhone,otpCode: txtOTP.text!,onsuccess: { data in
             let result = data as! String
             if result == "success"
             {
-                let token = defaults.valueForKey("token") as! String
-                DataConnect.updateProfile(self.numberPhone, token: token, profileUser: self.profileUser!, onsuccess: { (result) in
-                    
-                    }, onFailure: { 
+                if self.profileUser != nil{
+                    let token = defaults.valueForKey("token") as! String
+                    DataConnect.updateProfile(self.numberPhone, token: token, profileUser: self.profileUser!, onsuccess: { (result) in
                         
-                })
+                        }, onFailure: {
+                            
+                    })
+                }
+                
+               
                 self.performSegueWithIdentifier(kSegueVerifyToHome, sender: nil)
             }
             })

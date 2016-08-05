@@ -37,10 +37,7 @@ class BottomLineTextfield: UITextField {
             self.attributedPlaceholder = NSAttributedString(string:strPlaceholder,
                                                             attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         }
-        
-        
-        
-        
+        self.textColor = UIColor.whiteColor()
         let border = CALayer()
         let borderWidth = CGFloat(1.0)
         border.borderColor = UIColor.whiteColor().CGColor
@@ -50,5 +47,14 @@ class BottomLineTextfield: UITextField {
         self.layer.masksToBounds = true
         self.borderStyle = .None
     }
-
+    func inserttriangleImage()
+    {
+        self.rightViewMode = .Always
+        
+        let imageArrow = UIImageView(frame: CGRectMake(0, 0, 15, 15))
+        imageArrow.image = UIImage(named: "downarrow")
+        
+        
+        self.rightView = imageArrow
+    }
 }

@@ -8,8 +8,12 @@
 
 import UIKit
 import FBSDKLoginKit
+import MapKit
+import CoreLocation
 class LoginViewController: WithOutStatusBarViewController {
-    
+
+    @IBOutlet weak var txtRegister: BottomLineTextfield!
+    @IBOutlet weak var txtLoginFacebook: BottomLineTextfield!
     @IBOutlet weak var constrainTopLogo: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -24,11 +28,17 @@ class LoginViewController: WithOutStatusBarViewController {
         }
         
         self.view.needsUpdateConstraints()
-    }
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+        
+        paddingLeft(txtRegister)
+        paddingLeft(txtLoginFacebook)
     }
    
+    func paddingLeft(textField: UITextField)
+    {
+        let paddingView = UIView(frame: CGRectMake(0, 0, 40, textField.frame.height))
+        textField.leftView = paddingView
+        textField.leftViewMode = UITextFieldViewMode.Always
+    }
     override func viewDidAppear(animated: Bool) {
         
         
@@ -36,22 +46,48 @@ class LoginViewController: WithOutStatusBarViewController {
     
     
     @IBAction func btnFBLoginPressed(sender: AnyObject) {
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager.logInWithReadPermissions(["public_profile", "email", "user_friends"]) { (result, error) in
-            if (error == nil){
-                if result!.isCancelled
-                {
-                    print("User Logged Out")
-                }
-                else if(result!.grantedPermissions.contains("email"))
-                {
-                    self.returnUserData()
-                    
-                    
-                }
-                
+//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+//        fbLoginManager.logInWithReadPermissions(["public_profile", "email", "user_friends"]) { (result, error) in
+//            if (error == nil){
+//                if result!.isCancelled
+//                {
+//                    print("User Logged Out")
+//                }
+//                else if(result!.grantedPermissions.contains("email"))
+//                {
+//                    self.returnUserData()
+//                    
+//                    
+//                }
+//                
+//            }
+//        }
+        
+        
+        
+        var longitude :CLLocationDegrees = 106.704405
+        var latitude :CLLocationDegrees = 10.782642
+        
+        var location = CLLocation(latitude: latitude, longitude: longitude) //changed!!!
+       // print(location)
+        
+        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
+            //print(location)
+            
+            if error != nil {
+                print("Reverse geocoder failed with error" + error!.localizedDescription)
+                return
             }
-        }
+            
+            if placemarks!.count > 0 {
+                let pm = placemarks![0] as! CLPlacemark
+                print(pm)
+            }
+            else {
+                print("Problem with the data received from geocoder")
+            }
+        })
+        
     }
     
     func returnUserData()
