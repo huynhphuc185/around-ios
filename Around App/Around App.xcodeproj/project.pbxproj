@@ -15,10 +15,6 @@
 		6938191B1D5472EB0002810C /* cenbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6938190C1D544A240002810C /* cenbold.ttf */; };
 		6938191F1D547ABB0002810C /* OrderFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938191E1D547ABB0002810C /* OrderFormViewController.swift */; };
 		693819211D54838B0002810C /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693819201D54838B0002810C /* CustomLabel.swift */; };
-		6938192E1D54A6190002810C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9E1D51C42F00A763B1 /* Bolts.framework */; };
-		6938192F1D54A6190002810C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9F1D51C42F00A763B1 /* FBSDKCoreKit.framework */; };
-		693819301D54A6190002810C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA01D51C42F00A763B1 /* FBSDKLoginKit.framework */; };
-		693819311D54A6190002810C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA11D51C42F00A763B1 /* FBSDKShareKit.framework */; };
 		699E8CB91D519E2E0073EEA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E8CB81D519E2E0073EEA8 /* AppDelegate.swift */; };
 		699E8CBE1D519E2E0073EEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 699E8CBC1D519E2E0073EEA8 /* Main.storyboard */; };
 		699E8CC01D519E2E0073EEA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 699E8CBF1D519E2E0073EEA8 /* Assets.xcassets */; };
@@ -45,6 +41,10 @@
 		69B772AC1D53462C008EE52E /* ProfileUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B772AB1D53462C008EE52E /* ProfileUser.swift */; };
 		69C18DA91D543AC00048CE6F /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C18DA81D543AC00048CE6F /* MainHomeViewController.swift */; };
 		69C18DB61D54445D0048CE6F /* StatusbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C18DB51D54445D0048CE6F /* StatusbarViewController.swift */; };
+		69DE6A1E1D59D09F007ABAA7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9E1D51C42F00A763B1 /* Bolts.framework */; };
+		69DE6A1F1D59D09F007ABAA7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242E9F1D51C42F00A763B1 /* FBSDKCoreKit.framework */; };
+		69DE6A201D59D09F007ABAA7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA01D51C42F00A763B1 /* FBSDKLoginKit.framework */; };
+		69DE6A211D59D09F007ABAA7 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69242EA11D51C42F00A763B1 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,10 +188,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6938192E1D54A6190002810C /* Bolts.framework in Frameworks */,
-				6938192F1D54A6190002810C /* FBSDKCoreKit.framework in Frameworks */,
-				693819301D54A6190002810C /* FBSDKLoginKit.framework in Frameworks */,
-				693819311D54A6190002810C /* FBSDKShareKit.framework in Frameworks */,
+				69DE6A1E1D59D09F007ABAA7 /* Bolts.framework in Frameworks */,
+				69DE6A1F1D59D09F007ABAA7 /* FBSDKCoreKit.framework in Frameworks */,
+				69DE6A201D59D09F007ABAA7 /* FBSDKLoginKit.framework in Frameworks */,
+				69DE6A211D59D09F007ABAA7 /* FBSDKShareKit.framework in Frameworks */,
 				69242EDE1D51CDA100A763B1 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -791,6 +791,8 @@
 					App,
 					"$(PROJECT_DIR)/Around",
 					App,
+					"$(PROJECT_DIR)/Around",
+					App,
 				);
 				INFOPLIST_FILE = "Around App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -809,6 +811,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Around",
+					App,
 					"$(PROJECT_DIR)/Around",
 					App,
 					"$(PROJECT_DIR)/Around",
