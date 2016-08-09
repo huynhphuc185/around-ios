@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    menuItems = @[@"title",@"news", @"comments", @"map", @"calendar", @"wishlist",@"bookmark",@"tag" ];
+    menuItems = @[@"title",@"userprofile", @"paymentinfo", @"history", @"todayoffer", @"signuptoship",@"support24/7",@"setting" ];
 }
 
 
