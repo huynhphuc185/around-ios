@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MapViewController: WithOutStatusBarViewController {
+class MapViewController: StatusbarViewController {
 
     @IBOutlet weak var sidebarButton: UIBarButtonItem!
     override func viewDidLoad() {

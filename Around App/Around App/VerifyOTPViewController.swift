@@ -8,28 +8,38 @@
 
 import UIKit
 
-class VerifyOTPViewController: UIViewController {
+class VerifyOTPViewController: WithOutStatusBarViewController {
 
     @IBOutlet weak var txtOTP: UITextField!
+    var profileUser : ProfileUser?
     var numberPhone : String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
-    
+        
       @IBAction func btnSubmit(sender: AnyObject) {
         
         DataConnect.verifyOTP(numberPhone,otpCode: txtOTP.text!,onsuccess: { data in
-            let result = data as! Int
-            if result == 0
+            let result = data as! String
+            if result == "success"
             {
-                self.performSegueWithIdentifier("verifytohome", sender: nil)
+                if self.profileUser != nil{
+                    let token = defaults.valueForKey("token") as! String
+                    DataConnect.updateProfile(self.numberPhone, token: token, profileUser: self.profileUser!, onsuccess: { (result) in
+                        
+                        }, onFailure: {
+                            
+                    })
+                }
+                
+               
+                self.performSegueWithIdentifier(kSegueVerifyToHome, sender: nil)
             }
-            
             })
         {
+            showAlert("", message: "Error OTP", sender: self)
         }
     }
     override func didReceiveMemoryWarning() {

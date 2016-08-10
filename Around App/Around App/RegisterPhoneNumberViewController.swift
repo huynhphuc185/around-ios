@@ -8,26 +8,26 @@
 import Alamofire
 import UIKit
 
-class RegisterPhoneNumberViewController: UIViewController {
-
-    @IBOutlet weak var txtNumberPhone: UITextField!
+class RegisterPhoneNumberViewController: WithOutStatusBarViewController {
+    var profileUser : ProfileUser?
+    @IBOutlet weak var txtNumberPhone: PaddingTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
      @IBAction func btnSubmit(sender: AnyObject) {
 
+   
+        
         DataConnect.registerByPhoneNumber(txtNumberPhone.text!,onsuccess: { data in
            let result = data as! Int
             if result == 1
             {
-               self.performSegueWithIdentifier("registertoverify", sender: nil)
+               self.performSegueWithIdentifier(kSegueRegisterToVerify, sender: nil)
             }
             
             })
@@ -41,9 +41,10 @@ class RegisterPhoneNumberViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
-            if identifier == "registertoverify" {
+            if identifier == kSegueRegisterToVerify {
                 let vc = segue.destinationViewController as! VerifyOTPViewController
                 vc.numberPhone = txtNumberPhone.text
+                vc.profileUser = self.profileUser
             }
         }
     }

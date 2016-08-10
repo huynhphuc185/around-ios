@@ -12,13 +12,13 @@ class WithOutStatusBarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let view = UIView(frame:
-            CGRect(x: 0.0, y: 0.0, width: UIScreen.mainScreen().bounds.size.width, height: 20.0)
-        )
-        view.backgroundColor = UIColor.whiteColor()
         
-        self.view.addSubview(view)    }
+    
+    }
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

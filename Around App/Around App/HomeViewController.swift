@@ -7,20 +7,16 @@
 //
 
 import UIKit
-class HomeViewController: WithOutStatusBarViewController {
+class HomeViewController: StatusbarViewController {
     @IBOutlet weak var sidebarButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "News";
         self.sidebarButton.target = self.revealViewController()
         self.sidebarButton.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
-    override func prefersStatusBarHidden() -> Bool {
-        return false
-    }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
